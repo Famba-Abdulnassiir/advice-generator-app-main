@@ -1,24 +1,37 @@
 *{
     box-sizing: border-box;
     text-decoration: none;
+    margin: 0;
 }
 
 body{
     background-color:hsl(218, 23%, 16%);
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution {
+    position:absolute;
+    margin:0px 10%;
+    bottom:0;
+    font-size: 11px; text-align: center;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 .advice-container{
-    
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;  
     background-color: hsl(217, 19%, 24%);
+    margin:10px auto;
     width:40%;
-    height: 20rem;
+    /* height: 20rem; */
     border-radius: 10px;
 }
-.img-div{
-    margin:auto 6%;
+
+.img-div img{
+    width: 88%;
+    margin:6%;
+     
 }
 
 main{
@@ -39,25 +52,44 @@ p{
 
 .advice-number{
     color: hsl(150, 100%, 66%);
+    padding:10px;
     
 
 }
 
 .advice{
-   color: hsl(193, 38%, 86%);
+    color: hsl(193, 38%, 86%);
     font-size: 28px;
 }
 
 .icon-dice{
     display: flex;
-    position: fixed;
-    
-    margin: 3% 16%;
-    
     align-items: center;
+    margin-top:-1rem;
     justify-content: center;
     border-radius: 30rem;
     width: 3rem;
+    cursor: pointer;
     height: 3rem;
-    background-color:hsl(150, 100%, 66%); ;
+    background-color:hsl(150, 100%, 66%);
+}
+
+.icon-dice:hover{
+    box-shadow: 0 0 20px hsl(150, 100%, 66%), 0 0 50px hsl(150, 100%, 66%);
+
+}
+
+
+/* Work on the Responsiveness */
+@media only screen and (max-width: 600px) and (min-width: 360px){
+    .advice{
+        font-size: 20px;
+    }
+    
+    .advice-container{
+        margin-top:30%;
+        width:88%;
+        /* height: 20rem; */
+        border-radius: 10px;
+    }
 }
